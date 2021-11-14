@@ -1,0 +1,4 @@
+- [ ] Visual Assist
+  - [ ] alt shift o
+  - [ ] alt shift s
+- [ ] panel layout
