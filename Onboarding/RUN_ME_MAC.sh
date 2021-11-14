@@ -50,11 +50,16 @@ node dist/bin/gitcracken.js patcher
 
 popd
 
+gh config set git_protocol ssh
 
 #clone all organization repos to DEV
 
 yarn global add gh-repo-clone-all
 
+#cleanup from hacks
+rm -Rf .DS_Store
+rm -Rf *
 
-gh-repo-clone-all --no-archived . A2Vision`
+gh-repo-clone-all . A2Vision
+
 
