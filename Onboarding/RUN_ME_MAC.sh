@@ -15,7 +15,10 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 # [NPM](npmjs.org)
 # [Browsh][brow.sh]
 brew install mosh npm browsh git zsh gh yarn
-brew install --cask gitkraken  github
+brew install --cask sublime-text gitkraken  github
+
+
+
 
 mkdir DEV
 cd DEV
