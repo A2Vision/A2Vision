@@ -11,9 +11,13 @@ urls_to_markdown_list() {
   urls=("$@")
      for i in "${urls[@]}";
       do
-          title=$(url_get_title "$i")
+          title=$(url_get_title $i)
           url=$i
-          echo " - [ ] [$title||$url]($url)"
+	  if [ -z "$title" ];
+          then
+            title=$(echo "$url" | awk -F/ '{print $3}')
+          fi
+             echo " - [ ] [$title]($url)"
       done
 
 }
