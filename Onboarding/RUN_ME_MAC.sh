@@ -35,7 +35,7 @@ gh repo clone PMExtra/GitCracken
 
 
 
-cd GitCracken/GitCracken
+pushd  GitCracken/GitCracken
 yarn install
 yarn build
 
@@ -47,4 +47,14 @@ node dist/bin/gitcracken.js patcher
 
 /Applications/GitKraken.app/Contents/MacOS/GitKraken
 
+
+popd
+
+
 #clone all organization repos to DEV
+
+yarn global add gh-repo-clone-all
+
+
+gh-repo-clone-all --no-archived . A2Vision`
+
