@@ -14,7 +14,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 # [Mosh](mosh.org)
 # [NPM](npmjs.org)
 # [Browsh][brow.sh]
-brew install mosh npm browsh git zsh gh 
+brew install mosh npm browsh git zsh gh yarn
 brew install --cask gitkraken  github
 
 mkdir DEV
@@ -31,3 +31,20 @@ gh auth login
 # - Press Enter to open github.com in your browser... 
 # ✓ Authentication complete. Press Enter to continue...
 gh repo clone PMExtra/GitCracken
+# Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+
+
+
+cd GitCracken/GitCracken
+yarn install
+yarn build
+
+
+/Applications/GitKraken.app/Contents/MacOS/GitKraken
+#login and exit
+
+node dist/bin/gitcracken.js patcher
+
+/Applications/GitKraken.app/Contents/MacOS/GitKraken
+
+#clone all organization repos to DEV
